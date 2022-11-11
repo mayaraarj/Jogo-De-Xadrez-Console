@@ -1,0 +1,7 @@
+e2 para e4 (peão)
+a7 para a6 (peão)
+f1 para a6(bispo  captura peão)- pedir f10 a partir daqui
+b7 para a6 (peão captura bispo) 
+erro:g1 (cavalo diz não há movimentos possíveis) -- deve mostrar livres:e2,f3 e h3
+NAO MOVIMENTA NENHUM CAVALO
+

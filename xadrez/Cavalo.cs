@@ -17,7 +17,7 @@ namespace Jogo_De_Xadrez_Console.xadrez
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
-            return p != null || p.cor != cor;
+            return p == null || p.cor != cor;
         }
 
         public override bool[,] movimentosPossiveis()
@@ -55,19 +55,19 @@ namespace Jogo_De_Xadrez_Console.xadrez
                 mat[pos.Linha, pos.Coluna] = true;
             }
 
-            pos.definirValores(pos.Linha + 2, posicao.Coluna + 1);
+            pos.definirValores(posicao.Linha + 2, posicao.Coluna + 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
 
-            posicao.definirValores(pos.Linha + 2, posicao.Coluna - 1);
+            pos.definirValores(posicao.Linha + 2, posicao.Coluna - 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
 
-            pos.definirValores(pos.Linha + 1, pos.Coluna - 2);
+            pos.definirValores(posicao.Linha + 1, posicao.Coluna - 2);
 
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
