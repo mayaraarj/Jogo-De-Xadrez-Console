@@ -56,7 +56,7 @@ namespace xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                 }
                 //#jogadaespecial en passant BRANCA
-                if (pos.Linha == 3)
+                if (posicao.Linha == 3)
                 {
                     Posicao esquerda = new Posicao(posicao.Linha, posicao.Coluna - 1);
                     if (tab.posicaoValida(esquerda) && existeInimigo(esquerda) && tab.peca(esquerda) == partida.vulneravelEnPassant)
@@ -100,7 +100,7 @@ namespace xadrez
                 }
 
                 //#jogadaespecial en passant PRETA
-                if (pos.Linha == 4)
+                if (posicao.Linha == 4)
                 {
                     Posicao esquerda = new Posicao(posicao.Linha, posicao.Coluna - 1);
                     if (tab.posicaoValida(esquerda) && existeInimigo(esquerda) && tab.peca(esquerda) == partida.vulneravelEnPassant)
